@@ -13,8 +13,8 @@ Steps:
 
 Result:
 1. Video Window
-![videoWindow.png](https://i.loli.net/2021/06/06/Q8hdV3nfvE7mkyj.png)
+![VideoWindow.gif](https://i.loli.net/2021/06/06/JWbQni6hg2pHBPR.gif)
 
 2. rotating cube
-![MovableObj.png](https://i.loli.net/2021/06/06/r8lEQiDVsnGqKg9.png)
+![MovableObj.gif](https://i.loli.net/2021/06/06/EA3KZcJUPq6iy8C.gif)
 
