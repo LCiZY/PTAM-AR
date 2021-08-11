@@ -11,7 +11,17 @@
 using namespace std;
 using namespace TooN;
 
+struct FaceInfo {
+	bool up;
+	clock_t time;
+	float alpha;
+	unsigned int texID[2];
+};
+
 class RunningObj {
+	vector<string> texs;
+	unsigned int* texIDs;
+	vector<FaceInfo*> facesInfo; //面的信息列表
 
 public:
 	RunningObj();
@@ -25,5 +35,6 @@ private:
 	void DrawCube();
 	GLuint mnCubeDisplayList;
 	unsigned int GenTextures(string path);
-
+	void initTextures();
+	unsigned int getRandomTexID(int seed=0);
 };

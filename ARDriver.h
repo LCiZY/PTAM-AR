@@ -54,9 +54,11 @@ protected:
 
 	// Eyeballs:
 	//EyeGame mGame;
-	// Video
-	VideoGame mGame;
-	// Running Obj
-	//RunningObj mGame;
+
+	//// Video
+	//VideoGame mGame;
+
+	//// Running Obj
+	RunningObj mGame;
 };
 #endif

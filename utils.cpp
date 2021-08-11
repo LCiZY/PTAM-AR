@@ -28,7 +28,7 @@ int utils::getFilesCount(string path)
 	return result;
 }
 
-/*得到文件夹内的文件*/
+/*得到文件夹内的文件名*/
 void utils::getFiles(std::string path, std::vector<std::string>& files)
 {
 	//文件句柄  
@@ -42,6 +42,27 @@ void utils::getFiles(std::string path, std::vector<std::string>& files)
 		{
 			if (strcmp(fileinfo.name, ".") != 0 && strcmp(fileinfo.name, "..") != 0)
 				files.push_back(fileinfo.name);
+		} while (_findnext(hFile, &fileinfo) == 0);
+		_findclose(hFile);
+	}
+}
+
+/*得到文件夹内的文件名*/
+void utils::getFilesPath(std::string path, std::vector<std::string>& files)
+{
+	//文件句柄  
+	long   hFile = 0;
+	//文件信息  
+	struct _finddata_t fileinfo;
+	std::string p;
+	if ((hFile = _findfirst(p.assign(path).append("\\*").c_str(), &fileinfo)) != -1)
+	{
+		do
+		{
+			if (strcmp(fileinfo.name, ".") != 0 && strcmp(fileinfo.name, "..") != 0) {
+				std::string path = p.substr(0,p.size()-1) + string(fileinfo.name);
+				files.push_back(path);
+			}
 		} while (_findnext(hFile, &fileinfo) == 0);
 		_findclose(hFile);
 	}

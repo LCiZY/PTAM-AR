@@ -9,6 +9,7 @@ class utils
 public:
 	static int getFilesCount(string path);
 	static void getFiles(std::string path, std::vector<std::string>& files);
+	static void getFilesPath(std::string path, std::vector<std::string>& files);
 	static void removeFileInDir(std::string dir);
 };
 
