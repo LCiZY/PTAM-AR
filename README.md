@@ -6,9 +6,19 @@ A PTAM project that  integrates a video window and rotating cube.
 Steps:
 
 1. unzip ptam-include-lib.zip , add "include" to the "VC include dir" , add "lib" to the "VC libiary dir"
-2. unzip ptam-dll and move these .dll files to directory where PTAM.exe is.
-3. build CameraCalibrator
-4. build PTAM
+    - additional lib: 
+        - libcvd.lib
+        - gvars3.lib
+        - glew32.lib
+        - opengl32.lib
+        - 1394camera.lib
+        - blas_win32_MT.lib
+        - lapack_win32_MT.lib
+        - pthreadVCE2.lib
+        - videoInput.lib
+3. unzip ptam-dll and move these .dll files to directory where PTAM.exe is.
+4. build CameraCalibrator
+5. build PTAM
 
 Note:
 - This project only provides the Release version of lib.
